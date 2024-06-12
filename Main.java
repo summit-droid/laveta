@@ -6,7 +6,7 @@ class Rectangle {
 public class Main{
   public static void main(String[] args){
       rectangle Obj = new rectangle();
-      Obj.Area(20,15);
+      Obj.Area(30,15);
   }
 }
 }
