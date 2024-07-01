@@ -1,0 +1,38 @@
+drop database pwaniuni;
+create database pwaniuni;
+use pwaniuni;
+create table employee( EmployeeNumber INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Box VARCHAR(50),
+    SectionCode INT,
+    emp_rank VARCHAR(255)
+    );
+    select*from employee;
+    
+    insert into employee values(101, 'Mark', 'Miller', 'Box 101', 1, 'Lecturer');
+    insert into employee values(102, 'Sarah', 'Johnson', 'Box 102', 2, 'Dean');
+      insert into employee values(103, 'James', 'Brown', 'Box 103', 1, 'senior_lecturer');
+       insert into employee values(104, 'Anna', 'Davis', 'Box 104', 2, 'secretary');
+       create table section(SectionCode INT PRIMARY KEY,
+    SectionName VARCHAR(50),
+    HeadOfSectionName VARCHAR(50),
+    HeadOfSectionSignature VARCHAR(50)
+    
+    );
+   
+    
+    select*from section;
+    insert into section values(1, 'IT', 'John Doe', 'JDoe');
+    insert into section values(2, 'Finance', 'Jane Smith', 'JSmith');
+    insert into section values(3, 'sports', 'Daggy summit', 'dsummit');
+    insert into section values(4,'marketing','Manu jones','Mjones');
+    
+    create table sal_details(salary float, h_allowance float,travel_all float,medical_all float,PAYE float,nssf float,nhif float,loan float, net_salary float);
+select*from sal_details;
+insert into sal_details values(15000, 12000, 4000, 2000, 12000, 2000, 1000, 15000, 38000);
+insert into sal_details values(	20000, 12000, 4000, 2000, 12000, 2000, 1000, 5000, 42000);
+insert into sal_details values(	25000, 12000, 4000, 2000, 12000, 2000, 1000, 8000, 45000);
+insert into sal_details values(	30000, 12000, 4000, 2000, 12000, 2000, 1000, 10000, 49000);
+SELECT * FROM Employee WHERE lastName LIKE 'M%';
+SELECT * FROM sal_details WHERE salary+hAllowance+travelAll+medicalAll>= 6000 ;                   SELECT *FROM Employee FirstName LIKE '_a%';                                                                                              SELECT *FROM Payment WHERE NetSalary BETWEEN 20000 AND 60000;
